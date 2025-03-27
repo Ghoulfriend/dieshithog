@@ -1,0 +1,517 @@
+/* Make profile & derivatives stop hogging the entire bottom left corner*/
+.visual-refresh [class^=panels_] {
+  bottom: 0px;
+  padding-top: 8px;
+  left: 80px;
+  width: calc(100% - 80px);
+  border-radius: 0%;
+}
+
+[class*=listItem__] [class*=blobContainer_] foreignObject {
+  mask: url(#svg-mask-avatar-default);
+
+}
+
+[class*=listItem__] [class*=blobContainer_]:has([class*=numberBadge_]) foreignObject {
+  mask: url(#svg-mask-avatar-status-round-32) !important;
+
+}
+
+[class*=folderIcon__]:has([class*=numberBadge_]) [class*=numberBadge_]{
+margin-right: 2px;
+margin-bottom: 2px;
+}
+
+
+[class*=circleIconButton__] [class*=circleIcon__] {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+[class*=listItemWrapper__]:has([class*=numberBadge_]) foreignObject {
+  mask: url(#svg-mask-avatar-status-round-32) !important;
+}
+
+[class*=activityPanel_] {
+  --background-surface-high: #232428;
+  box-shadow: 0px 1px 1px #37393f;
+  border-radius: 0% !important;
+  margin-bottom: 8px;
+  padding-top: 1px;
+}
+
+[class*=file_]
+{
+--background-surface-high: #2b2d31;
+}
+
+[data-type="success"]{
+  background-color: #1e1f22 !important;
+  color: #f2f3f5 !important;
+}
+
+[class*=colorDanger_]{
+  --text-danger: #da373c;
+  --text-feedback-critical: white;
+  --background-feedback-critical: #da373c;
+
+}
+
+[class*=button__][class*=colorRed__]
+{
+  --button-outline-danger-background: #313338 !important;
+  --button-outline-danger-background-hover: #da373c;
+  --button-outline-danger-text: white;
+  --button-outline-danger-text-hover: white;
+  --button-outline-danger-border-hover: #da373c;
+  --button-outline-danger-border: #da373c;
+}
+
+/* Chat Bar */
+.visual-refresh [class*=scrollerInner__] {
+    padding-bottom: 5px;
+}
+
+.visual-refresh .button__74017,.buttonContents_e6e74f:not([class*="enabled__67645"]) {
+    transform: scale(1.25) !important;
+}
+
+.visual-refresh [class*=spriteContainer__] {
+   transform: scale(1.1) !important;
+}
+
+[class*=repliedMessage_]{
+  --header-secondary: #b4b9c0;
+}
+
+foreignObject:has([aria-label="Direct Messages"]) {
+  border-radius: 100%;
+  transition: all 0.2s linear;
+}
+
+foreignObject:has([aria-label="Direct Messages"]):has([class*=selected__]) {
+  border-radius: 0;
+  transition: all 0.2s linear;
+}
+
+
+[class*=guildSeparator__] {
+  background-color: #35363c !important;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  margin-top: 8px;
+}
+
+.visual-refresh [class*=autocompleteInner__]{
+  --background-surface-high: #2b2d31;
+  --background-base-lowest:#1e1f22;
+}
+
+[class*=panels_c48ade] [aria-label="Mute"], [aria-label="Deafen"], [aria-label="Enable Game Activity"], [aria-label="Disable Game Activity"], [aria-label="User Settings"]
+{
+  background-color: transparent !important;
+}
+
+[class*=avatar__]:has([mask="url(#svg-mask-status-idle)"]) [class*=pointerEvents__]{
+  fill: #f0b232 !important;
+}
+
+[class*=avatar__]:has([mask="url(#svg-mask-status-online)"]) [class*=pointerEvents__]{
+  fill: #23a55a !important;
+}
+
+[class*=avatar__]:has([mask="url(#svg-mask-status-dnd)"]) [class*=pointerEvents__]{
+  fill: #f23f43 !important;
+}
+
+[class*=separator_]{
+  background-color: #3b3d44 !important;
+}
+
+
+[class*=actionButtons_] {
+  padding-bottom: 8px;
+  margin-top: -5px;
+  box-shadow: 0px 1px 1px #37393f;
+}
+
+[class*=privateChannelsHeaderContainer_] {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: .02em;
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.icon_f34534.guildIcon__48112 {
+  border-radius: 50% !important
+}
+
+[class*=bar_] [class*=title_] [class*=title_] {
+  visibility: hidden;
+}
+
+span[class*="timestampInline_"] time::before {
+  content: attr(aria-label);
+  font-size: 12px;
+}
+
+span[class*="timestampInline_"] {
+  font-size: 0px !important;
+}
+
+.visual-refresh [class^=panels_] [class*=container__] {
+  top: -3px;
+}
+
+[data-list-item-id="guildsnav___home"] {
+  --background-surface-higher: #313338;
+}
+
+[class*=drawerSizingWrapper__], #emoji-picker-tab-panel {
+  --background-surface-high: #2b2d31;
+  --background-base-lower: #1e1f22;
+}
+
+[class*=interactive_] {
+  border-radius: 3px !important;
+}
+
+
+[class*=searchBar_] {
+  border-radius: 3px !important;
+  border: none !important;
+}
+
+[class*=searchBar_] div {
+  color: #949ba4;
+  font-weight: 500 !important;
+}
+
+[class*=contentRegion__] {
+  --background-base-low: #313338;
+}
+
+.visual-refresh.theme-dark,
+.visual-refresh .theme-dark {
+  --bg-base-tertiary: #1e1f22;
+  --background-base-low: #232428;
+  --background-base-lower: #313338;
+  --background-base-lowest: #2b2d31;
+  --input-background: #1e1f22;
+  --bg-base-secondary: #2b2d31;
+  --background-surface-high: #111214;
+  --background-surface-higher: #111214;
+  --background-surface-highest: #2b2d31;
+  --text-link: #0baafc;
+  --background-secondary: #2b2d31;
+  --background-secondary-alt: #2b2d31;
+  --interactive-normal: #b5bac1;
+  --interactive-hover: #dbdee1;
+  --background-modifier-selected: #404249;
+  --background-modifier-hover: #35373c;
+  --background-mod-subtle: #2b2d31;
+  --background-tertiary: #1e1f22;
+  --icon-primary: #80848e;
+  --icon-secondary: #b5bac1;
+  --background-primary: #313338;
+  --input-border: transparent;
+  --input-border-active: transparent;
+  --header-secondary: #dbdee1;
+  --header-primary: #f2f3f5;
+  --channel-icon: #80848e;
+  --channels-default: #949ba4;
+  --app-border-frame: transparent;
+  --border-faint: transparent;
+  --border-feedback-critical: transparent;
+  --border-subtle: transparent;
+  --border-normal: transparent;
+  --border-strong: transparent;
+  --chat-background-default: #383a40;
+  --scrollbar-auto-track: #2b2d31;
+  --scrollbar-auto-thumb: #1a1b1e;
+  --scrollbar-thin-thumb: #1a1b1e;
+  --background-floating: #111214;
+  --background-message-hover: #2e3035;
+  --background-mentioned: #444037;
+  --background-mentioned-hover: #403d38;
+  --background-message-highlight: #393b48;
+  --background-message-highlight-hover: #35384a;
+  --background-code: #2b2d31;
+  --text-code-comment: #7f8791;
+  --text-code-string: #6faee6;
+  --text-code-tag: #74d07d;
+  --text-code-builtin: #d78f50;
+  --text-code-variable: #6faee6;
+  --text-muted: #949ba4;
+  --text-positive: #2dc75f;
+  --info-warning-foreground: #f0b232;
+  --card-primary-bg:#313338;
+  --mention-background: #494b6f;
+  --mention-foreground: #babeea;
+  --status-danger: #f23f43;
+  --autocomplete-bg: #2b2d31;
+}
+
+[class*=cardPrimary__]
+{
+  border: 1px solid #3b3d44 !important;
+}
+
+
+.visual-refresh [class*=chat_][data-has-border=true] {
+  border-top: 1px solid #1e1f22;
+}
+
+.visual-refresh [class*=sidebar_]:after {
+  display: none;
+}
+
+[aria-label="Channel header"] {
+  box-shadow: 0px 1px 1px #282a2e;
+}
+
+:where(.visual-refresh) [class*=link__] {
+  border-radius: 3px !important;
+}
+
+[class*=stackedBars__]:has([class*=replyBar__] , [class*=commandInfo__]) {
+  --background-surface-higher: #2b2d31 !important;
+  border: solid 1px #2b2d31 !important;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+[class*=hasBanner_] [class*=header_] {
+  box-shadow: none !important;
+}
+
+[class*=sidebarList_] [class*=container_] [class*=header_] {
+  box-shadow: 0px 1px 1px #202225;
+}
+
+[class*=sidebarList_] {
+  --background-mod-subtle: #35373c;
+}
+
+[class*=member_] {
+  border-radius: 3px !important;
+}
+
+[class*=menu_] {
+  --header-primary: #b5bac1;
+  --border-subtle: #2e2f34;
+
+}
+
+:where(.visual-refresh) [class*=channelTextArea__] {
+  border-color: transparent !important;
+  border: 1px solid transparent !;
+}
+
+:where(.visual-refresh) [class*=channelTextArea__]:has([class*=replyBar__] , [class*=commandInfo__]) {
+  border-top: 1px solid #2b2d31 !important;
+}
+
+[class*=embedWrapper_] {
+  --background-surface-high: #2b2d31;
+
+}
+
+[class*=embedFull__] {
+  border-right: 1px solid #2b2d31 !important;
+  border-top: 1px solid #2b2d31 !important;
+  border-bottom: 1px solid #2b2d31 !important;
+}
+
+
+[class*=spoilerContent__][class*=hidden__] {
+  background-color: #212226;
+}
+
+/* Fix the dead space padding on the server and channel list */
+.visual-refresh [class^=wrapper_],
+.visual-refresh .container_ee69e0 {
+  padding-bottom: unset;
+  --custom-app-panels-height: 16px
+}
+
+[aria-label="Apps"] {
+  display: none;
+}
+
+[class^=container]>[class^=icon]:has(> path) {
+  display: none
+}
+
+[class*=friendsButtonContainer__] {
+  height: 35px;
+  margin-top: 5px;
+}
+
+[class*=friendsButtonContainer__] [class*=avatar_] {
+  margin-left: 2.5px;
+  margin-right: 5%;
+}
+
+[class*=friendsButtonContainer__] [class*=avatar_] [class*=linkButtonIcon__] {
+  height: 28px;
+  width: 28px;
+}
+
+[aria-label="Direct Messages"] [class*=sectionDivider__] {
+  background-color: transparent;
+}
+
+
+/*[class*=privateChannels__] [class*=searchBar__] {
+  display: none;
+} */
+
+[class*=quickswitcher_] {
+  --background-surface-high: #2b2d31;
+}
+
+[class*=searchBar__] [class*=button__] {
+  border-radius: 3px !important;
+  display: block;
+  color: #949ba4;
+  text-align: initial;
+  font-size: 14px;
+}
+
+:where(.visual-refresh) [class*=button__] [class*=contents__] {
+  font-weight: 500 !important;
+}
+
+[class*=privateChannels__] [class*=searchBar__] {
+  --button-secondary-background: #1e1f22;
+  --button-secondary-background-hover: #1e1f22;
+  --button-secondary-background-active: #1e1f22;
+  --button-secondary-text: #949ba4;
+  box-shadow: 0px 1px 1px #202225;
+}
+
+.visual-refresh .container__133bf {
+  border-top: 1px solid #1e1f22;
+}
+
+[aria-label="Friends"] [role="navigation"] {
+
+  box-shadow: 0px 1px 1px #282a2e;
+}
+
+[class*=winButtonsWithDivider_]::before {
+  display: none;
+}
+
+[class*=channelAttachmentArea_] {
+  --background-base-low: #383a40;
+  --background-surface-high: #2b2d31;
+  border-bottom: 1px solid #42444b;
+}
+
+[aria-label="Help"],
+[aria-label="Inbox"] {
+  display: none !important;
+}
+
+
+[class*=typing_]{
+  margin-bottom: -5px;
+}
+
+/* Aligned Chat Box and Typing indicator */
+.container_c48ade {
+  --custom-chat-input-margin-bottom: 20px;
+}
+
+:root {
+  --custom-channel-textarea-text-area-height: 44px;
+}
+
+.visual-refresh .base_b88801 {
+  font-size: 13.5px;
+  height: 28px;
+}
+
+/* guild size fix wholesale begin */
+
+/* custom guild icon size */
+.visual-refresh {
+	--size: 48; /* visual refresh is 40, old discord is 48. */
+	--guildbar-avatar-size: calc(var(--size) * 1px);
+	--guildbar-folder-size: var(--g-48);
+	--g-48: calc(var(--guildbar-avatar-size) + 8px);
+	--g-19-r: calc((var(--size) / 2 - 1) / var(--size) * 40px);
+	--g-40-r: calc(var(--guildbar-avatar-size) / (var(--size) + 8) * 48);
+	--g-48-r: calc(var(--guildbar-avatar-size) * 48 / 40);
+	--g-56-r: calc(var(--g-48) * 56 / 48);
+	--g-4-r: calc((var(--g-48-r) - var(--guildbar-avatar-size)) / -2);
+	--g-4-r-2: calc((var(--g-56-r) - var(--g-48)) / -2);
+
+	.folderIcon__48112 > .wrapper_cc5dd2 {
+		width: var(--g-48) !important;
+		height: var(--g-48) !important;
+	}
+	.folderIcon__48112 > .wrapper_cc5dd2 > .svg_cc5dd2 {
+		width: var(--g-56-r);
+		height: var(--g-56-r);
+		top: var(--g-4-r-2);
+		left: var(--g-4-r-2);
+	}
+	.folderIcon__48112 > .wrapper_cc5dd2 > .svg_cc5dd2 > foreignObject {
+		width: calc()
+	}
+	.svg_cc5dd2 {
+		width: var(--g-48-r);
+		height: var(--g-48-r);
+		top: var(--g-4-r);
+		left: var(--g-4-r);
+	}
+	.wrapper__6e9f8, 
+	.icon__6e9f8,
+	.childWrapper__6e9f8 {
+		width: 40px;
+		height: 40px;
+	}
+	.folder__48112, 
+	.folderIconWrapper__48112 {
+		width: 48px;
+		height: 48px;
+	}
+	.expandedFolderIconWrapper__48112 {
+		width: var(--g-40-r);
+		height: var(--g-40-r);
+		margin: 0;
+	}
+	.closedFolderIconWrapper__48112 {
+		width: var(--g-40-r);
+		height: var(--g-40-r);
+	}
+	.guildIcon__48112 {
+		width: var(--g-19-r);
+		height: var(--g-19-r);
+	}
+	.stack_dbd263 {
+		height: auto !important;
+		padding-bottom: 4px !important;
+	}
+	.tutorialContainer__1f388 .svg_cc5dd2 > mask > use[fill="black"] {
+		display: none;
+	}
+	.tutorialContainer__1f388 .numberBadge__2b1f5 {
+		outline: 2px solid var(--bg-base-tertiary);
+		border-radius: 50%;
+	}
+	.unreadMentionsIndicatorBottom_ef3116,
+	.unreadMentionsIndicatorTop_ef3116 {
+		width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2);
+		padding: calc(var(--custom-guild-list-padding) / 2);
+	}
+}
+
+/* guild size fix wholesale end */
