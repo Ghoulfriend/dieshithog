@@ -82,6 +82,23 @@ margin-bottom: 2px;
    transform: scale(1.1) !important;
 }
 
+[aria-label="Pinned Messages"] [class*=header__]
+{
+  --background-surface-high: #232428;
+}
+
+[class*=actionButtons__]:has([class*=jumpButton__]){
+  --background-surface-high: #232428;
+  box-shadow: none !important;
+}
+
+[aria-label="Pinned Messages"] [class*=messagesPopoutWrap__]
+{
+  box-shadow: 0 1px 5px 0px rgb(0, 0, 0, 0.4);
+  --background-surface-high: #313338;
+  --background-surface-higher: #313338;
+}
+
 [class*=repliedMessage_]{
   --header-secondary: #b4b9c0;
 }
@@ -116,6 +133,10 @@ foreignObject:has([aria-label="Direct Messages"]):has([class*=selected__]) {
 
 [class*=avatar__]:has([mask="url(#svg-mask-status-idle)"]) [class*=pointerEvents__]{
   fill: #f0b232 !important;
+}
+
+[class*=avatar__]:has([mask="url(#svg-mask-status-online)"]) [class*=pointerEvents__]{
+  fill: #23a55a !important;
 }
 
 [class*=avatar__]:has([mask="url(#svg-mask-status-online)"]) [class*=pointerEvents__]{
@@ -228,7 +249,6 @@ span[class*="timestampInline_"] {
   --border-faint: transparent;
   --border-feedback-critical: transparent;
   --border-subtle: transparent;
-  --border-normal: transparent;
   --border-strong: transparent;
   --chat-background-default: #383a40;
   --scrollbar-auto-track: #2b2d31;
@@ -252,6 +272,8 @@ span[class*="timestampInline_"] {
   --card-primary-bg:#313338;
   --mention-background: #494b6f;
   --mention-foreground: #babeea;
+  --modal-background: #313338;
+  --modal-footer-background:#232428;
   --status-danger: #f23f43;
   --autocomplete-bg: #2b2d31;
 }
@@ -318,8 +340,8 @@ span[class*="timestampInline_"] {
 
 [class*=embedWrapper_] {
   --background-surface-high: #2b2d31;
-
 }
+
 
 [class*=embedFull__] {
   border-right: 1px solid #2b2d31 !important;
