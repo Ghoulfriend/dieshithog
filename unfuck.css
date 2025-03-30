@@ -50,12 +50,17 @@ scale: 90%;
 }
 
 
-[class*=activityPanel_] {
+[class*=activityPanel_] , #vc-spotify-player {
   --background-surface-high: #232428;
   box-shadow: 0px 1px 1px #37393f;
   border-radius: 0% !important;
   margin-bottom: 8px;
   padding-top: 1px;
+}
+
+#vc-spotify-player {
+border-bottom: 0px;
+background: unset !important;
 }
 
 [data-list-id*=forum-channel-list] , [class*=grid_]
@@ -76,6 +81,52 @@ scale: 90%;
   letter-spacing: .02em;
   padding-left: 2px;
   font-weight: 600;
+}
+
+[class*=text-sm\/medium_]:not([class*=pronounsText],[class*=privateChannelsHeaderContainer__],[class*=cooldownText_],[class*= gameName__]){
+  font-family: var(--font-display);
+  font-size: 12px;
+  line-height: 1.3333333333333333;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  font-weight: 600; 
+}
+
+.visual-refresh [class*=title_]{
+color: var(--header-secondary); 
+}
+
+[class*=subText__] [class*=activityText_] {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  line-height: 1.3333333333333333;
+  font-weight: 500;
+  color: var(--channels-default);
+}
+
+[class*=addFriendWumpusWrapper__] > img
+{
+  display: none;
+}
+
+[id=add_friend-tab] [class*=header__] [class*=title__]
+{
+font-size: 16px;
+color: var(--header-primary);
+text-transform: uppercase;
+line-height: 20px;
+font-weight: 600;
+font-family: var(--font-display)
+}
+
+[class*=subtext__] [class*=text-sm\/medium_]
+{
+  font-family: var(--font-primary);
+  font-size: 12px;
+  line-height: 1.3333333333333333;
+  font-weight: 500;
+  color: var(--channels-default);
+  text-transform: none;
 }
 
 [class*=mainContent__]:has([class*=overflow__]) [class*=icon__]
@@ -181,6 +232,21 @@ border-radius:3px !important;
 
 [class*=repliedMessage_]{
   --header-secondary: #b4b9c0;
+}
+
+[class*=outer_]:has([class*=footer__])
+{
+  --background-secondary-alt: #232428 !important;
+}
+
+[class*=outer_] [class*=footer__]:has([class*=button__],[class*=contents__])
+{
+border-top: 1px solid #343539;
+}
+
+[id*=popout_] [class*=footer__]:has([class*=button__],[class*=contents__])
+{
+border-top: none;
 }
 
 [class*=guildSeparator__] {
@@ -309,7 +375,7 @@ span[class*="timestampInline_"] {
   --background-primary: #313338;
   --input-border: transparent;
   --input-border-active: transparent;
-  --header-secondary: #dbdee1;
+  --header-secondary: #b5bac1;
   --header-primary: #f2f3f5;
   --channel-icon: #80848e;
   --channels-default: #949ba4;
@@ -357,6 +423,10 @@ span[class*="timestampInline_"] {
 
 .visual-refresh [class*=chat_][data-has-border=true] {
   border-top: 1px solid #1e1f22;
+}
+
+[class*=nowPlayingColumn__]{
+  border-left: 1px solid #3f4147;
 }
 
 .visual-refresh [class*=sidebar_]:after {
@@ -420,9 +490,25 @@ span[class*="timestampInline_"] {
   border-bottom: 1px solid #2b2d31 !important;
 }
 
+#user-context-note [class*=label]{
+display: none;
+}
+
+#user-context-note::after{
+content: 'Edit Note';
+}
+  
 
 [class*=spoilerContent__][class*=hidden__] {
   background-color: #212226;
+}
+
+[aria-label="Channel Topic"] [class*=root__]
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px !important;
+  border: none !important;
 }
 
 /* Fix the dead space padding on the server and channel list */
@@ -434,14 +520,6 @@ span[class*="timestampInline_"] {
 
 [class*=itemCard__]{
   --background-surface-high: #1e1f22;
-}
-
-[aria-label="Apps"] {
-  display: none;
-}
-
-[class^=container]>[class^=icon]:has(> path) {
-  display: none
 }
 
 [class*=friendsButtonContainer__] {
