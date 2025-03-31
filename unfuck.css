@@ -260,6 +260,12 @@ border-radius:3px !important;
 
 }
 
+:where(.visual-refresh) [class*=button_]
+{
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
 [class*=button__][class*=colorRed__]
 {
   --button-outline-danger-background: #313338 !important;
@@ -531,6 +537,8 @@ span[class*="timestampInline_"] {
   --button-positive-background: #248045;
   --button-positive-border: 0px;
   --button-positive-background-hover: #1a6334;
+  --radius-sm: 4px;
+  --button-filled-brand-border: 1px solid transparent;
 }
 
 [class*=cardPrimary__]
@@ -551,6 +559,15 @@ span[class*="timestampInline_"] {
   display: none;
 }
 
+.visual-refresh [class*=sidebarList_] {
+  width: 264px !important;
+}
+
+[class*=sidebarResizeHandle_]
+{
+  display: none !important;
+}
+
 [aria-label="Channel header"] {
   box-shadow: 0px 1px 1px #282a2e;
 }
@@ -560,10 +577,17 @@ span[class*="timestampInline_"] {
 }
 
 [class*=stackedBars__]:has([class*=replyBar__] , [class*=commandInfo__]) {
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
   --background-surface-higher: #2b2d31 !important;
   border: solid 1px #2b2d31 !important;
   margin-left: -1px;
   margin-right: -1px;
+}
+
+.visual-refresh [class*=attachButton__] [class*=icon__]
+{
+ padding: none;
 }
 
 [class*=hasBanner_] [class*=header_] {
@@ -576,6 +600,15 @@ span[class*="timestampInline_"] {
 
 [class*=sidebarList_] {
   --background-mod-subtle: #35373c;
+}
+
+[class*=membersWrap_]{
+min-width: 0;
+}
+
+
+[class*=members_]{
+  width: 260px;
 }
 
 [class*=member_] {
@@ -602,7 +635,7 @@ span[class*="timestampInline_"] {
 }
 
 
-[class*=embedFull__] {
+.visual-refresh [class*=embedFull__] {
   border-right: 1px solid #2b2d31 !important;
   border-top: 1px solid #2b2d31 !important;
   border-bottom: 1px solid #2b2d31 !important;
@@ -640,12 +673,6 @@ content: 'Edit Note';
   --background-surface-high: #1e1f22;
 }
 
-[class*=friendsButtonContainer__] {
-  height: 35px;
-  margin-top: 5px;
-  margin-bottom: 14px;
-}
-
 [aria-label="Direct Messages"] [href="/store"] [class*=avatar_]
 {
   margin-left: 2.5px;
@@ -679,6 +706,15 @@ content: 'Edit Note';
   height: 28px;
   width: 28px;
 }
+
+[aria-label="Direct Messages"] [class*=interactiveSelected__] [class*=linkButtonIcon__] {
+  color: var(--interactive-active);
+}
+
+[aria-label="Direct Messages"] [class*=interactive_]:active [class*=linkButtonIcon__]{
+  color: var(--interactive-active);
+  }
+
 
 [aria-label="Direct Messages"] [class*=sectionDivider__] {
   background-color: transparent;
