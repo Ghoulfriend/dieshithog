@@ -49,17 +49,47 @@ foreignObject:has([aria-label="Direct Messages"]):has([class*=selected__]) {
 scale: 90%;
 }
 
+[id=privacy_and_safety_standing-tab] [class*=cardPrimary__]
+{
+  border: none !important;
+}
+
+:where(.visual-refresh) [class*=menu]{
+  border-radius: 4px;
+}
+
+:where(.visual-refresh) [class*=menu] [class*=scroller_] [class*=wrapper_]
+{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: 1fr;
+justify-items: center;
+padding: 4px 0 6px 2px !important;
+}
+
+:where(.visual-refresh) [class*=customItem_] [class*=button_]
+{
+display: flex;
+justify-content: center;
+width: 32px;
+height: 32px;
+padding: 4px;
+flex: 0 0 auto;
+cursor: pointer;
+border-radius: 50%;
+background-color: var(--background-tertiary);
+}
 
 [class*=activityPanel_] , #vc-spotify-player {
   --background-surface-high: #232428;
   box-shadow: 0px 1px 1px #37393f;
   border-radius: 0% !important;
-  margin-bottom: 8px;
-  padding-top: 1px;
+  margin-bottom: 8px !important;
+  padding-top: 1px !important;
 }
 
 #vc-spotify-player {
-border-bottom: 0px;
+border-bottom: 0px !important;
 background: unset !important;
 }
 
@@ -83,7 +113,7 @@ background: unset !important;
   font-weight: 600;
 }
 
-[class*=text-sm\/medium_]:not([class*=pronounsText],[class*=privateChannelsHeaderContainer__],[class*=cooldownText_],[class*= gameName__], [class*=searchFilter_],[class*=searchAnswer_]){
+[class*=text-sm\/medium_]:not([class*=pronounsText],[class*=privateChannelsHeaderContainer__],[class*=cooldownText_],[class*= gameName__], [class*=searchFilter_],[class*=searchAnswer_],[class*=description__]){
   font-family: var(--font-display);
   font-size: 12px;
   line-height: 1.3333333333333333;
@@ -546,6 +576,17 @@ span[class*="timestampInline_"] {
   border: 1px solid #3b3d44 !important;
 }
 
+.visual-refresh .vc-addon-card
+{
+background-color: var(--background-secondary-alt);
+border:  unset;
+}
+
+.visual-refresh .vc-addon-card:hover
+{
+background-color: var(--background-tertiary);
+border: unset;
+}
 
 .visual-refresh [class*=chat_][data-has-border=true] {
   border-top: 1px solid #1e1f22;
