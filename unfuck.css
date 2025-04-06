@@ -7,7 +7,7 @@
   border-radius: 0%;
 }
 
-/* Invalidated by New Serve Fix Desu */
+/* Invalidated by New Server Fix Desu */
 
 /*[class*=listItem__] [class*=blobContainer_] foreignObject {
   mask: url(#svg-mask-avatar-default);
@@ -47,6 +47,22 @@ foreignObject:has([aria-label="Direct Messages"]):has([class*=selected__]) {
 
 [class*=lowerBadge_]{
 scale: 90%;
+}
+
+[class*=trait_]
+{
+border-radius: 4px;
+border:  1px solid var(--border-normal);
+}
+
+[class*=trait_]:hover
+{
+border:  1px solid var(--text-muted);
+}
+
+.visual-refresh [class*=media_]
+{
+  border-radius: 3px;
 }
 
 [id=privacy_and_safety_standing-tab] [class*=cardPrimary__]
@@ -113,13 +129,33 @@ background: unset !important;
   font-weight: 600;
 }
 
-[class*=text-sm\/medium_]:not([class*=pronounsText],[class*=privateChannelsHeaderContainer__],[class*=cooldownText_],[class*= gameName__], [class*=searchFilter_],[class*=searchAnswer_],[class*=description__]){
+.visual-refresh [class*=membersGroup_] > span{
   font-family: var(--font-display);
   font-size: 12px;
   line-height: 1.3333333333333333;
   text-transform: uppercase;
   letter-spacing: .02em;
   font-weight: 600; 
+}
+
+.visual-refresh [class*=peopleColumn__] [class*=sectionTitle] [class*=title__]
+{
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: .02em;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.visual-refresh [class*=eyebrow_]
+{
+  font-family: var(--font-display);
+  font-size: 12px;
+  line-height: 1.3333333333333333;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .02em;
 }
 
 .visual-refresh [class*=search__] {
@@ -252,12 +288,12 @@ letter-spacing: .02em;
 font-weight: 700;
 }
 
-[class*=markup__]
+[class*=container__]:not([class*=descriptionClamp_])[class*=markup__]
 {
   --border-normal: #1e1f22 !important;
 }
 
-[id*=message-accessories-] [class*=content]:not([class*=contents__])
+[id*=message-accessories-] [class*=content]:has([class*=headerLine_]):not([class*=contents__])
 {
 padding-bottom: 15px;
 border-radius:0px !important;
@@ -354,6 +390,12 @@ border-top: 1px solid #343539;
 {
 border-top: none;
 }
+
+[class*=outer_] [class*=footer__]:has([aria-label="Example Button"])
+{
+border-top: none;
+}
+
 
 [class*=guildSeparator__] {
   background-color: #35363c !important;
@@ -586,6 +628,16 @@ border:  unset;
 {
 background-color: var(--background-tertiary);
 border: unset;
+}
+
+.visual-refresh .vc-settings-quickActions-pill:hover
+{
+background: var(--background-secondary-alt);
+}
+
+.visual-refresh .vc-settings-quickActions-pill
+{
+background: var(--background-secondary);
 }
 
 .visual-refresh [class*=chat_][data-has-border=true] {
@@ -848,7 +900,7 @@ margin-left: -6px;
 }
 
 /* Aligned Chat Box and Typing indicator */
-.container_c48ade {
+[class*=container_] {
   --custom-chat-input-margin-bottom: 20px;
 }
 
@@ -856,10 +908,15 @@ margin-left: -6px;
   --custom-channel-textarea-text-area-height: 44px;
 }
 
-.visual-refresh .base_b88801 {
-  font-size: 13.5px;
+
+.visual-refresh [class*=form_]:has([class*=channelBottomBarArea_]) [class*=typing_] {
+  font-size: 14px !important;
   height: 28px;
-}
+  color: var(--text-normal);
+  left: 16px;
+  line-height: 24px;
+  font-weight: 500;
+} 
 
 /* guild size fix wholesale begin */
 
