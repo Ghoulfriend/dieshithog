@@ -49,6 +49,48 @@ foreignObject:has([aria-label="Direct Messages"]):has([class*=selected__]) {
 scale: 90%;
 }
 
+.visual-refresh .rootWithShadow__49fc1{
+  box-shadow: var(--legacy-elevation-border),var(--legacy-elevation-high);
+}
+
+.visual-refresh .root__49fc1
+{
+  border-radius: 4px;
+  border: none;
+}
+
+:where(.visual-refresh) .header__49fc1{
+  padding: var(--modal-vertical-padding) var(--modal-horizontal-padding);
+}
+
+:where(.visual-refresh) .content__49fc1{
+  padding-top: unset;
+}
+
+.visual-refresh .footerSeparator__49fc1, .visual-refresh .separator__49fc1{
+  box-shadow: inset 0 1px 0 hsl(var(--primary-630-hsl)/.6);
+}
+
+:where(.visual-refresh) .footer__49fc1{
+  border-radius: 0 0 5px 5px;
+  padding: var(--modal-vertical-padding) var(--modal-horizontal-padding);
+}
+
+.visual-refresh [class*=toast__]
+{
+  background-color: var(--background-tertiary);
+  border: none;
+  border-radius: 32px;
+  box-shadow: none;
+  padding: 16px;
+}
+
+.visual-refresh [aria-label="Family Center"] [class*=box_]{
+  border: none;
+  box-shadow: var(--elevation-low);
+  background-color: var(--background-secondary);
+}
+
 [class*=trait_]
 {
 border-radius: 4px;
@@ -118,6 +160,17 @@ background: unset !important;
   --background-modifier-hover: #393c41;
 }
 
+[class*=bar__]:has([class*=unreadIcon__])
+{
+  background-color: var(--background-floating);
+  margin-bottom: 4px;
+  margin-top: 4px;
+  opacity: .95;
+  border: none;
+  box-shadow: 0 1px 3px 0px black;
+
+}
+
 [class*=mainContent__] [class*=overflow__]:not([class*=name__])
 {
   font-family: var(--font-display);
@@ -146,6 +199,11 @@ background: unset !important;
   letter-spacing: .02em;
   font-family: var(--font-display);
   font-weight: 600;
+}
+
+[class*=markup__] code{
+  background: var(--background-secondary) !important;
+  border: 1px solid var(--background-tertiary) !important;
 }
 
 .visual-refresh [class*=eyebrow_]
@@ -271,9 +329,16 @@ position: absolute;
 left: 5px;
 }
 
+[id*=message-content-] [class*=container_]:has([class*=description_] , [class*=button])
+{
+  background-color: var(--background-secondary);
+  border-radius: 8px;
+  border: none;
+}
+
 
 /*invite button shittery*/
-[id*=message-accessories-] 
+[id*=message-accessories-]
 {
 --background-surface-high: #2b2d31;
 }
@@ -577,6 +642,7 @@ span[class*="timestampInline_"] {
   --channels-default: #949ba4;
   --app-border-frame: transparent;
   --border-faint: transparent;
+  --bg-mod-faint: color-mix(in oklab,hsl(var(--primary-500-hsl)/0.3) 100%,hsl(var(--theme-base-color-hsl,0 0% 0%)/0.3) var(--theme-base-color-amount,0%));
   --border-feedback-critical: transparent;
   --border-subtle: transparent;
   --border-strong: transparent;
