@@ -856,6 +856,18 @@ content: 'Edit Note';
   width: 28px;
 }
 
+[aria-label="Direct Messages"] [href="/message-requests"] [class*=avatar_] [class*=linkButtonIcon__]
+{
+  height: 28px;
+  width: 28px;
+}
+
+[aria-label="Direct Messages"] [href="/message-requests"] [class*=avatar_]
+{
+  margin-left: 2.5px;
+  margin-right: 5%;
+}
+
 [class*=friendsButtonContainer__] [class*=avatar_] {
   margin-left: 2.5px;
   margin-right: 5%;
@@ -936,11 +948,21 @@ margin-left: -6px;
   box-shadow: 0px 1px 1px #202225;
 }
 
-.visual-refresh .container__133bf {
+.visual-refresh .container__133bf, .visual-refresh .container__01ae2, .visual-refresh .container_f391e3 {
   border-top: 1px solid #1e1f22;
 }
 
+.visual-refresh [class*=chatLayerWrapper__] [class*=resizeHandle__]{
+ background-color: var(--bg-overlay-3,var(--background-tertiary));
+}
+
+
 [aria-label="Friends"] [role="navigation"] {
+
+  box-shadow: 0px 1px 1px #282a2e;
+}
+
+[class*=container__]:has([class*=upperContainer__] , [aria-label="Message Requests"]) {
 
   box-shadow: 0px 1px 1px #282a2e;
 }
