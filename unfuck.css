@@ -1036,11 +1036,16 @@ margin-left: -6px;
   font-weight: 500;
 } 
 
-[class*=sidebar]:has([aria-label="Servers sidebar"]) [class*=guilds_]
+[class*=sidebar_]:has([aria-label="Servers sidebar"]) [class*=guilds_]
 {
   width: 72px;
   margin-left: -5px;
   margin-right: 3px;
+}
+
+[class*=sidebar_]:has([aria-label="Servers sidebar"]) [class*=pill]
+{
+  margin-left: 5px;
 }
 
 #vc-friendcount{
