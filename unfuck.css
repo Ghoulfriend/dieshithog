@@ -37,44 +37,6 @@
   border-radius: 0%;
 }
 
-/* Invalidated by New Server Fix Desu */
-
-/*[class*=listItem__] [class*=blobContainer_] foreignObject {
-  mask: url(#svg-mask-avatar-default);
-
-}
-
-[class*=listItem__] [class*=blobContainer_]:has([class*=numberBadge_]) foreignObject {
-  mask: url(#svg-mask-avatar-status-round-32) !important;
-
-}
-
-[class*=listItemWrapper__]:has([class*=numberBadge_]) foreignObject {
-  mask: url(#svg-mask-avatar-status-round-32) !important;
-} 
-
-[class*=folderIcon__]:has([class*=numberBadge_]) [class*=numberBadge_]{
-margin-right: 2px;
-margin-bottom: 2px;
-}
-
-[class*=circleIconButton__] [class*=circleIcon__] {
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
-  margin-bottom: 8px;
-} */
-
-/*foreignObject:has([aria-label="Direct Messages"]) {
-  border-radius: 100%;
-  transition: all 0.2s linear;
-}
-
-foreignObject:has([aria-label="Direct Messages"]):has([class*=selected__]) {
-  border-radius: 0;
-  transition: all 0.2s linear;
-} */
-
 [class*=lowerBadge_]{
 scale: 90%;
 }
@@ -1142,8 +1104,8 @@ nav[class*="guilds_"] {
       align-items: center;
 
       [class*="folderPreview__"] {
-          width: calc(var(--guildbar-folder-size) / 3 * 2 + var(--custom-folder-preview-gap) * 2);
-          height: calc(var(--guildbar-folder-size) / 3 * 2 + var(--custom-folder-preview-gap) * 2);
+          width: calc(var(--guildbar-folder-size) * (2/3) + var(--custom-folder-preview-gap));
+          height: calc(var(--guildbar-folder-size) * (2/3) + var(--custom-folder-preview-gap));
       }
   }
 
@@ -1216,6 +1178,8 @@ nav[class*="guilds_"] {
       --guildbar-avatar-size: var(--guildbar-folder-size) !important;
   }
 }
+
+
 
 
 /* guild size fix wholesale end */
