@@ -527,7 +527,7 @@ object-fit: contain;
   text-transform: uppercase;
 }
 
-.icon_f34534.guildIcon__48112 {
+.icon_f34534.folderPreviewGuildIcon__48112 {
   border-radius: 50% !important
 }
 
@@ -814,7 +814,7 @@ content: 'Edit Note';
 
 /* Fix the dead space padding on the server and channel list */
 .visual-refresh [class^=wrapper_],
-.visual-refresh .container_ee69e0 {
+.visual-refresh .container__2637a {
   padding-bottom: unset;
   --custom-app-panels-height: 16px
 }
@@ -1071,7 +1071,7 @@ nav[class*="guilds_"] {
       }
   }
 
-  svg:not([class*="placeholderMask__"]) {
+  [class*="shiftSVG_"] {
       top: 0px;
       left: 0px;
 
