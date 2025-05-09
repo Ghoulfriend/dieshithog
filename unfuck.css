@@ -750,7 +750,7 @@ background: var(--background-secondary);
   box-shadow: none !important;
 }
 
-[class*=sidebarList_] [class*=container_] [class*=header_] {
+[class*=sidebarList_] [class*=container_] [class*=header_]:not([class*=name__]) {
   box-shadow: 0px 1px 1px #202225;
 }
 
