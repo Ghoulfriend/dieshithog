@@ -204,8 +204,27 @@ background: unset !important;
 
 [class*=markup__] code{
   background: var(--background-secondary) !important;
-  border: 1px solid var(--background-tertiary) !important;
+  border: 1px solid #292b2f !important;
 }
+
+
+
+[class*=container_] [class*=textContainer__]{
+  
+  background: var(--background-secondary) !important;
+  border: 1px solid #292b2f !important;
+}
+
+[class*=container_] [class*=textContainer__] code{
+  
+  background: var(--background-secondary) !important;
+}
+
+[class*=container_]:has([class*=textContainer__] code) [class*=footer_]{
+    border: 1px solid #292b2f !important;
+}
+
+
 
 .visual-refresh [class*=eyebrow_]
 {
@@ -540,6 +559,16 @@ object-fit: contain;
   border-radius: 50% !important
 }
 
+[class*=bar_]:has([class*=title_]):not([class*=contentRegionShownSidebar__])
+{
+  background-color: #1e1f22;
+}
+
+[class*=bar_] [class*=guilds_]
+{
+  background-color: #1e1f22;
+}
+
 [class*=bar_] [class*=title_] [class*=title_] > svg{
 display: none;
 }
@@ -795,9 +824,10 @@ min-width: 0;
 
 
 .visual-refresh [class*=embedFull__] {
+  border-left-color: var(--text-link);
   border-right: 1px solid #2b2d31 !important;
-  border-top: 1px solid #2b2d31 !important;
-  border-bottom: 1px solid #2b2d31 !important;
+  border-top: transparent;
+  border-bottom: transparent;
 }
 
 #user-context-note [class*=label]{
