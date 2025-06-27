@@ -396,7 +396,9 @@ border-radius:3px !important;
 
 [class*=file_]
 {
+border-radius: 4px;
 --background-surface-high: #2b2d31;
+box-shadow: none;
 }
 
 [data-type="success"]{
@@ -532,6 +534,14 @@ object-fit: contain;
 {
   box-shadow: 0 0px 2px 0px #191a1d;
   background-color: #313338;
+}
+
+[class*=wrapperAudio_] , [class*=fileWrapper__]
+{
+  background-color: var(--background-surface-high);
+  border-color: var(--border-subtle);
+  border-radius: 4px !important;
+  box-shadow: none !important;
 }
 
 [class*=uploadContainer_] [class*=actionBar_] [class*=wrapper_]:hover
