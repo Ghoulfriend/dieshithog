@@ -209,7 +209,7 @@ background: unset !important;
 
 
 
-[class*=container_] [class*=textContainer__]{
+[class*=container_] [class*=textContainer__]:has(code){
   
   background: var(--background-secondary) !important;
   border: 1px solid #292b2f !important;
@@ -1029,7 +1029,7 @@ margin-left: -6px;
 .visual-refresh [class*=form_]:has([class*=channelBottomBarArea_]) [class*=typing_] {
   font-size: 14px !important;
   height: 28px;
-  color: var(--text-normal);
+  color: var(--text-default);
   left: 16px;
   line-height: 24px;
   font-weight: 500;
