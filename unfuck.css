@@ -152,6 +152,10 @@ border-bottom: 0px !important;
 background: unset !important;
 }
 
+#gif-picker-tab-panel{
+  background-color: unset;
+}
+
 [data-list-id*=forum-channel-list] , [class*=grid_]
 {
   --background-base-low: #393c41;
@@ -631,7 +635,34 @@ span[class*="timestampInline_"] {
   --background-base-lower: #1e1f22;
 }
 
+#emoji-picker-tab-panel [class*=inspector], #emoji-picker-tab-panel [class*=unicodeShortcut_], #sticker-picker-tab-panel [class*=Shortcut], #sticker-picker-tab-panel [class*=inspector]
+{
+  border-top: none;
+}
+
+#emoji-picker-tab-panel [class*=inspector], #sticker-picker-tab-panel [class*=inspector]
+{
+  background-color: #222328;
+}
+
+#gif-picker-tab-panel [class*=header_], #sticker-picker-tab-panel [class*=header]:has([class*=wrapper_]), #emoji-picker-tab-panel [class*=header]:has([class*=searchBar])
+{
+  box-shadow: 0px 1.1px 2px 0px #1f2023;
+  border-radius: 0;
+}
+
+[class*=drawerSizingWrapper__] [class*=contentWrapper__]:has(#gif-picker-tab-panel, #sticker-picker-tab-panel, #emoji-picker-tab-panel){
+border: 1px solid #24252a49 !important;
+border-radius: var(--radius-sm);
+}
+
 [class*=interactive_] {
+  border-radius: 3px !important;
+}
+
+#sticker-picker-tab-panel [class*=container_]
+{
+  border: none;
   border-radius: 3px !important;
 }
 
