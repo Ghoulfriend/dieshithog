@@ -207,8 +207,12 @@ background: unset !important;
 }
 
 [class*=markup__] code{
-  background: var(--background-secondary) !important;
-  border: 1px solid #292b2f !important;
+  background: var(--background-secondary);
+  border: 1px solid #292b2f;
+}
+
+.custom-theme-background [class*=markup__] code{
+border: 1px solid var(--user-profile-border)
 }
 
 
