@@ -455,6 +455,16 @@ box-shadow: none;
   --background-surface-high: #232428;
 }
 
+[aria-label="Pinned Messages"] [class*=messagesPopoutWrap__]
+{
+  background-color: #2f3136;
+}
+
+
+[aria-label="Pinned Messages"] [class*=messageGroupWrapper__]{
+  box-shadow: 0px 0px 5px 1px #1f2023;
+}
+
 [class*=actionButtons__]:has([class*=jumpButton__]){
   --background-surface-high: #232428;
   box-shadow: none !important;
