@@ -852,7 +852,30 @@ background: var(--background-secondary);
 }
 
 [class*=hasBanner_] [class*=header_] {
-  box-shadow: none !important;
+  box-shadow: none !important; 
+  border-top: 1px solid #1e1f22;
+  height: calc(1px + var(--custom-channel-header-height))
+}
+
+[class*=hasBanner_] [class*=header_]:hover {
+  box-shadow: 0px 1px 1px #202225;
+  border-top: 1px solid #1e1f22
+}
+
+
+
+[class*=hasBanner_] [class*=animatedContainer_]
+{
+  border-top: 1px solid #1e1f22
+}
+
+[class*=bannerVisible_] [class*=headerGlass_]
+{
+  box-shadow: 0px 1px 1px #202225;
+  box-sizing: unset;
+  border-bottom: none;
+  left: 1px;
+  width: calc(100% - 1px);
 }
 
 [class*=sidebarList_] [class*=container_] [class*=header_]:not([class*=name__]) {
