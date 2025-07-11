@@ -593,7 +593,7 @@ object-fit: contain;
   border-radius: 50% !important
 }
 
-[class*=bar_]:has([class*=title_]):not([class*=contentRegionShownSidebar__])
+[class*=bar_]:has([class*=title_]):not([class*=contentRegionShownSidebar__] , [class*=showToolbar__])
 {
   background-color: #1e1f22;
 }
