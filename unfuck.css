@@ -331,6 +331,19 @@ color: var(--header-secondary);
   display: none;
 }
 
+[data-tab-id=ADD_FRIEND]
+{
+background-color: var(--button-positive-background) !important;
+transition: background-color 0s linear !important;
+}
+
+[data-tab-id=ADD_FRIEND][aria-selected=true]
+{
+color: var(--text-positive) !important;
+background: transparent !important;
+transition: background-color 0s linear !important;
+}
+
 [id=add_friend-tab] [class*=header__] [class*=title__]
 {
 font-size: 16px;
@@ -542,6 +555,16 @@ box-shadow: none;
   --text-feedback-critical: white;
   --background-feedback-critical: #da373c;
 
+}
+
+#vencordthemes-tab [class*=defaultColor__]
+{
+--status-positive: var(--text-positive);
+--text-danger: var(--status-danger)
+}
+
+.vc-backup-restore-card{
+  color: var(--text-default);
 }
 
 :where(.visual-refresh) [class*=button_]
@@ -808,6 +831,18 @@ border-radius: var(--radius-sm);
   border-radius: 3px !important;
   border-color: transparent !important;
   border: none;
+}
+
+#vencordplugins-tab input , #pluginrepo-tab input, #vencordcloud-tab input
+{
+  border-color: transparent;
+}
+
+#vencordthemes-tab [class*=input__]
+{
+background-color: var(--input-background);
+border: solid 1px #3b3d44;
+border-color: transparent !important;
 }
 
 [class*=peopleColumn__] [class*=searchBar_]
