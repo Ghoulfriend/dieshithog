@@ -211,6 +211,11 @@ background: unset !important;
   border: 1px solid #292b2f;
 }
 
+[class*=markup__] blockquote
+{
+  color: var(--text-default);
+}
+
 .custom-theme-background [class*=markup__] code{
 border: 1px solid var(--user-profile-border)
 }
@@ -1042,6 +1047,41 @@ background: var(--background-secondary);
 min-width: 0;
 }
 
+#channels  [class*=container__] [class*=progressContainer__]
+{
+  background-color: #18191c;
+  height: 5px;
+  margin-top: 25px;
+}
+
+#channels  [class*=container__]:has([class*=progressContainer__])
+{
+  border-bottom: 1px solid #3b3d42;
+}
+
+#channels  [class*=container__] [class*=progress__]
+{
+  height: 5px;
+  margin-top: -5px;
+  inset: unset;
+  background: linear-gradient(-270deg,#3f70dd,#b176f2);
+}
+
+#channels  [class*=container__] [class*=textContentContainer__] [class*=text-xs\/semibold_]:not([class*=boostCountText__])
+{
+  text-transform: uppercase;
+}
+
+#channels [class*=container__] [class*=textContentContainer__]
+{
+margin-top: -25px
+}
+
+#channels [class*=container__]:hover [class*=progressContainer__]
+{
+  transform: none;
+}
+
 
 [class*=members_]{
   width: 260px;
@@ -1055,6 +1095,21 @@ min-width: 0;
   --header-primary: #b5bac1;
   --border-subtle: #2e2f34;
 
+}
+
+[class*=wrapper__]:has([class*=questAcceptedContent__])
+{
+border-radius: 0 !important;
+top: -9px !important;
+border-top: none !important;
+width: calc(100% + 2px) !important;
+left: -1px !important;
+}
+
+[class*=postEnrollmentBackground__]
+{
+border-radius: 0;
+border-top: 0;
 }
 
 :where(.visual-refresh) [class*=channelTextArea__] {
