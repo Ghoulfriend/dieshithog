@@ -5,7 +5,7 @@
 
      [class^=trailing] {
         gap: unset;
-        > [class^=recentsIcon] {
+        > [class^=recentsIcons] {
             &:hover {
                 background-color: var(--background-modifier-hover);
                 color: var(--interactive-hover);
@@ -27,6 +27,108 @@
         }
     }
 /* Top Bar End */
+
+[class*=recentsIcon]
+{
+  color: var(--icon-tertiary);
+  position: fixed;
+  top: 37px;
+  right: 48px;
+}
+
+[class*=recentsIcon] svg
+{
+width: var(--chat-input-icon-size);
+height: var(--chat-input-icon-size)
+}
+
+[class*=recentsIcon]:hover
+{
+  color: var(--icon-secondary);
+}
+
+[class*=trailing]:has([class*=recentsIcon])
+{
+  z-index: 200;
+}
+
+.vc-toolbox-btn
+{
+  margin-left: 30px !important;
+}
+
+[class*=inboxTitle_]
+{
+  color: var(--interactive-normal) !important;
+}
+
+[class*=recentMentionsPopout__]
+{
+  background-color: #2f3136;
+ box-shadow: 0 1px 5px 0px rgb(0, 0, 0, 0.4);
+}
+
+[class*=recentMentionsPopout__] [class*=header__]:not([class*=heading-xl\/semibold_])
+{
+  background-color: #232428
+}
+
+[class*=recentMentionsPopout__] [class*=channelHeader__]
+{
+  background-color: #2f3136;
+}
+
+[class*=recentMentionsPopout__] [class*=messageContainer__], [class*=recentMentionsPopout__] [class*=messages__] {
+  background-color: #36393f;
+}
+
+[class*=recentMentionsPopout__] [class*=button__]
+{
+  border-radius: 100% !important;
+  background-color: #18191c !important;
+}
+
+[class*=recentMentionsPopout__] [class*=friendRequestsButton__]
+{
+background-color: #18191c !important;
+}
+
+[id*=popout_] [class*=browser_][class*=container_]
+{
+  background-color: #2f3136;
+  box-shadow: 0 1px 5px 0px rgb(0, 0, 0, 0.4);
+}
+
+[id*=popout_] [class*=browser_][class*=container_] [class*=list_]
+{
+  background-color: #2f3136;
+  border-color: transparent;
+}
+
+[id*=popout_] [class*=browser_][class*=container_] [class*=container__]:has([class*=facepile__])
+{
+  background-color: #36393f;
+  border-color: transparent;
+}
+
+[id*=popout_] [class*=browser_][class*=container_] [class*=header]:not([class*=heading-xl\/semibold_])
+{
+  background-color: #232428
+}
+
+[id*=popout_] [class*=browser_][class*=container_] [class*=header] [class*=searchBox_]
+{
+background-color: var(--background-gradient-low,var(--input-background));
+border-color: transparent;
+border-radius: 4px;
+}
+
+[class*=threadNameContainer_] [class*=inputWrapper__] [class*=input]
+{
+  border-color: transparent !important;
+  border-radius: 4px;
+}
+
 
 /* Make profile & derivatives stop hogging the entire bottom left corner*/
 .visual-refresh [class^=panels_] {
@@ -611,9 +713,15 @@ box-shadow: none;
   background-color: #2f3136;
 }
 
+[aria-label="Pinned Messages"] [class*=messagesPopoutWrap__] [class*=text-lg\/semibold_]
+{
+  color: var(--interactive-normal) !important;
+}
+
 
 [aria-label="Pinned Messages"] [class*=messageGroupWrapper__]{
-  box-shadow: 0px 0px 5px 1px #1f2023;
+ /* box-shadow: 0px 0px 5px 1px #1f2023; */
+ background-color: #36393f;
 }
 
 [class*=actionButtons__]:has([class*=jumpButton__]){
@@ -1045,6 +1153,7 @@ background: var(--background-secondary);
 
 [class*=membersWrap_]{
 min-width: 0;
+--background-gradient-chat: #2b2d31;
 }
 
 #channels  [class*=container__] [class*=progressContainer__]
@@ -1344,8 +1453,7 @@ box-shadow: none;
   border-bottom: 1px solid #42444b;
 }
 
-[aria-label="Help"],
-[aria-label="Inbox"] {
+[aria-label="Help"]{
   display: none !important;
 }
 
