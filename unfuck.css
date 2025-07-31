@@ -32,8 +32,8 @@
 {
   color: var(--icon-tertiary);
   position: fixed;
-  top: 37px;
-  right: 48px;
+  top: 38px;
+  right: 46px;
 }
 
 [class*=recentsIcon] svg
@@ -49,7 +49,12 @@ height: var(--chat-input-icon-size)
 
 [class*=trailing]:has([class*=recentsIcon])
 {
-  z-index: 200;
+  z-index: 101;
+}
+
+[class*=applicationStore_] [class*=headerBar__], [class*=shopViewWrapper__] [class*=headerBar__], [class*=page_] [class*=headerBar__]
+{
+  z-index: 102;
 }
 
 .vc-toolbox-btn
