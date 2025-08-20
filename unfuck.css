@@ -1459,6 +1459,15 @@ margin-top: -25px
   transform: none;
 }
 
+[class*=popoutContainer__][class*=popoutContent_]:has([class*=emojiSection_]){
+  background-color: #202225;
+  box-shadow: none;
+}
+
+[class*=popoutContainer__][class*=popoutContent_] [class*=guildSection_]{
+  background-color: #202225;
+}
+
 
 [class*=members_]{
   width: 260px;
