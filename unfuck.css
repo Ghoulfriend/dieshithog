@@ -303,7 +303,7 @@ background-color: unset;
   color: var(--icon-tertiary);
   position: fixed;
   top: 38px;
-  right: 17px;
+  right: 14px;
 }
 
 [class*=recentsIcon] svg
@@ -334,7 +334,7 @@ height: var(--chat-input-icon-size)
 
 [class*=inviteToolbar__]
 {
-margin-right: 60px;
+margin-right: 65px;
 }
 
 [class*=theme-dark]:has([class*=threadSidebarOpen_]) [class*=container__]:has([class*=upperContainer__] , [aria-label="Message Requests"]){
