@@ -299,6 +299,13 @@ background-color: unset;
   right: 46px;
 }
 
+.vc-toolbox-btn{
+  color: var(--icon-tertiary);
+  position: fixed;
+  top: 38px;
+  right: 17px;
+}
+
 [class*=recentsIcon] svg
 {
 width: var(--chat-input-icon-size);
@@ -320,9 +327,22 @@ height: var(--chat-input-icon-size)
   z-index: 102;
 }
 
-.vc-toolbox-btn
+.visual-refresh [class*=toolbar__] [class*=search__]
 {
-  margin-left: 30px !important;
+ margin-right: 40px;
+}
+
+[class*=inviteToolbar__]
+{
+margin-right: 60px;
+}
+
+[class*=theme-dark]:has([class*=threadSidebarOpen_]) [class*=container__]:has([class*=upperContainer__] , [aria-label="Message Requests"]){
+  z-index: 103;
+}
+
+[class*=chat_][class*=threadSidebarOpen_]{
+border-radius: 0px;
 }
 
 [class*=inboxTitle_]
@@ -405,6 +425,15 @@ border-radius: 4px;
   left: 73px;
   width: calc(100% - 73px);
   border-radius: 0%;
+}
+
+[class*=panels_] [class*=container__] [class*=container__]:has([class*=videoContainer__])
+{
+  display: none;
+}
+
+*{
+--custom-nameplate: unset !important;
 }
 
 [class*=lowerBadge_]{
@@ -1703,6 +1732,7 @@ box-shadow: none;
 
 .visual-refresh .container__133bf, .visual-refresh .container__01ae2, .visual-refresh .container_f391e3 {
   border-top: 1px solid #1e1f22;
+  border-radius: 0px;
 }
 
 .visual-refresh [class*=chatLayerWrapper__] [class*=resizeHandle__]{
