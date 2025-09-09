@@ -291,40 +291,57 @@ background-color: unset;
 }
 /* Profile Popout End */
 
-[class*=recentsIcon]
+[aria-label="Inbox"]
 {
   color: var(--icon-tertiary);
   position: fixed;
-  top: 38px;
+  top: 44px;
   right: 46px;
 }
 
 .vc-toolbox-btn{
-  color: var(--icon-tertiary);
   position: fixed;
-  top: 38px;
+  top: 39px;
   right: 14px;
 }
 
-[class*=recentsIcon] svg
+.vc-toolbox-btn svg{
+color: var(--icon-tertiary);
+width: var(--chat-input-icon-size);
+height: var(--chat-input-icon-size)
+}
+
+[aria-label="Inbox"] svg
 {
 width: var(--chat-input-icon-size);
 height: var(--chat-input-icon-size)
 }
 
-[class*=recentsIcon]:hover
+.vc-toolbox-btn svg:hover{
+  color: var(--icon-secondary);
+}
+
+[aria-label="Inbox"]:hover
 {
   color: var(--icon-secondary);
 }
 
-[class*=trailing]:has([class*=recentsIcon])
+[class*=trailing]:has([aria-label="Inbox"])
 {
   z-index: 101;
 }
 
-[class*=applicationStore_] [class*=headerBar__], [class*=shopViewWrapper__] [class*=headerBar__], [class*=page_] [class*=headerBar__], [class*=applicationStore_]:has([class*=navBarContent__])
+[class*=applicationStore_] [class*=headerBar], [class*=shopViewWrapper__] [class*=headerBar__], [class*=page_] [class*=headerBar__], [class*=applicationStore_]:has([class*=navBarContent__])
 {
   z-index: 102;
+}
+
+[class*=container_]:has([class*=headerBar__] , path[d="M10.55 4.4c.13-.24.1-.54-.12-.71L8.6 2.24a1 1 0 0 0-1.24 0l-4 3.15a1 1 0 0 0-.38.79v4.03c0 .43.5.66.82.39l2.28-1.9a3 3 0 0 1 3.84 0c.03.02.08 0 .08-.04V6.42a4 4 0 0 1 .55-2.02ZM7.36 10.23a1 1 0 0 1 1.28 0l1.18.99 2.98 2.48 1.84 1.53a1 1 0 0 1-.67 1.77.1.1 0 0 0-.1.09l-.23 3.06a2 2 0 0 1-2 1.85H4.36a2 2 0 0 1-2-1.85l-.24-3.16a1 1 0 0 1-.76-1.76l6-5Z"]){
+  z-index: 102;
+}
+
+[class*=applicationStore_] .children__9293f:after{
+  background: none;
 }
 
 .visual-refresh [class*=toolbar__] [class*=search__]
