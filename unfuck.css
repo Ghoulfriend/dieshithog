@@ -217,7 +217,7 @@
             .connection__9bfb9 > .connectionInfo__9bfb9 {
               min-width: 110px;
             }
-              .defaultColor__4bd52.text-xs\/normal_cf4812,
+              .defaultColor_b717a1.text-xs\/normal_cf4812,
               .metadata__9bfb9{
                 display: none;}
 
@@ -1232,10 +1232,25 @@ span[class*="timestampInline_"] {
   background-color: #222328;
 }
 
-#gif-picker-tab-panel [class*=header_], #sticker-picker-tab-panel [class*=header]:has([class*=wrapper_]), #emoji-picker-tab-panel [class*=header]:has([class*=searchBar])
+#gif-picker-tab-panel [class*=header_], #sticker-picker-tab-panel [class*=header]:has([class*=wrapper_]), #emoji-picker-tab-panel [class*=header]:has([class*=control])
 {
   box-shadow: 0px 1.1px 2px 0px #1f2023;
   border-radius: 0;
+}
+
+[class*=emojiPickerHasTabWrapper_] [class*=categoryList_] [class*=scroller_]
+{
+margin-top: -5px;
+}
+
+[class*=emojiPickerHasTabWrapper_] [class*=categoryList_]
+{
+margin-top: 5px
+}
+
+.align-chat-input [class*=utton__]:hover , .align-chat-input  [class*=attachButtonInner]:hover
+{
+  background-color: unset !important;
 }
 
 [class*=drawerSizingWrapper__] [class*=contentWrapper__]:has(#gif-picker-tab-panel, #sticker-picker-tab-panel, #emoji-picker-tab-panel){
@@ -1358,6 +1373,13 @@ background-color: var(--input-background);
   --button-positive-background-hover: #1a6334;
   --radius-sm: 4px;
   --button-filled-brand-border: 1px solid transparent;
+}
+
+[class*=wrapper]{
+  --custom-input-background-color: var( --input-background) !important;
+  --custom-input-border-color: transparent !important; 
+  --custom-input-hover-border-color: transparent !important;
+  --custom-input-focus-border-color: transparent !important;
 }
 
 [class*=cardPrimary__]
@@ -1546,7 +1568,7 @@ border-top: 0;
 
 :where(.visual-refresh) [class*=channelTextArea__] {
   border-color: transparent !important;
-  border: 1px solid transparent !;
+  border: 1px solid transparent;
 }
 
 :where(.visual-refresh) [class*=channelTextArea__]:has([class*=replyBar__] , [class*=commandInfo__]) {
@@ -1786,17 +1808,62 @@ box-shadow: none;
   margin-bottom: -5px;
 }
 
-/* Aligned Chat Box and Typing indicator */
-[class*=container_] {
-  --custom-chat-input-margin-bottom: 20px;
+/* revert chat input position */
+.channelTextArea_f75fb0 {
+    margin-bottom: 20px;
 }
 
-:root {
-  --custom-channel-textarea-text-area-height: 44px;
+/* revert chat input height */
+.align-chat-input {
+    --custom-channel-textarea-text-area-height: 44px;
+}
+.align-chat-input .attachWrapper__0923f {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* revert typing bubbles position */
+.align-chat-input .inTextChannel_b88801.base_b88801 {
+    bottom: 1px;
+    top: auto;
+}
+.align-chat-input .inTextChannel_b88801 .typingDots_b88801 {
+    margin-left: 0;
+}
+.align-chat-input .inTextChannel_b88801 .text_b88801 {
+    margin-left: 4px;
+}
+
+/* move chat back down to usual position */
+.scrollerSpacer__36d07 {
+    height: 28px !important;
+}
+
+/* revert color of typing username */
+.align-chat-input .inTextChannel_b88801 .text_b88801>strong {
+  font-size: 14px !important;
+  height: 28px;
+  color: var(--text-default);
+  left: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+/* change attachment button svg back */
+.attachButton__0923f path {
+    d: path("M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm0-17a1 1 0 0 1 1 1v4h4a1 1 0 1 1 0 2h-4v4a1 1 0 1 1-2 0v-4H7a1 1 0 1 1 0-2h4V7a1 1 0 0 1 1-1Z");
+}
+
+/* remove weird gradient thing */
+.chatTypingGradientAtBottom__36d07 {
+    display: none;
+}
+.chatTypingGradientNotAtBottom__36d07 {
+    display: none;
 }
 
 
-.visual-refresh [class*=form_]:has([class*=channelBottomBarArea_]) [class*=typing_] {
+.visual-refresh [class*=form_]:has([class*=channelBottomBarArea_]) [class*=typing_]{
   font-size: 14px !important;
   height: 28px;
   color: var(--text-default);
@@ -1804,6 +1871,32 @@ box-shadow: none;
   line-height: 24px;
   font-weight: 500;
 } 
+
+[class*=cooldownText_]{
+  font-size: 0px !important;
+  height: 28px;
+  color: var(--text-default);
+  left: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+[class*=cooldownText_] svg{
+  width: 15px;
+  height: 15px;
+}
+
+[class*=cooldownText]::before
+{
+  margin-top: 3px;
+  height: 28px;
+  left: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  font-size: 14px !important;
+  content: "Slowmode is enabled.";
+  margin-right: -5px;
+}
 
 [class*=sidebar_]:has([aria-label="Servers sidebar"]) [class*=guilds_]
 {
