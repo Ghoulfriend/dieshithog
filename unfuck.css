@@ -446,6 +446,11 @@ border-radius: 4px;
 
 [class^=panels_] [class*=container__]:has([class*=avatarWrapper__]){
 height: 68px;
+scale: 105%;
+margin-left: 5px;
+}
+
+[class^=panels_] [class*=container__] [class*=avatarWrapper__]{
 }
 
 [class*=panels_] [class*=container__] [class*=container__]:has([class*=videoContainer__])
@@ -455,10 +460,16 @@ height: 68px;
 
 *{
 --custom-nameplate: unset !important;
+--custom-nameplate-neutral-hovered: unset !important;
+--custom-nameplate-neutral: unset !important;
 }
 
 [class*=lowerBadge_]{
 scale: 90%;
+}
+
+[class*=plateMuted__]:hover{
+  background-color: none !important;
 }
 
 .visual-refresh .rootWithShadow__49fc1{
