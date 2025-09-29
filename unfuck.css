@@ -1584,7 +1584,7 @@ border-top: 0;
   border-radius: 6px;
 }
 
-:where(.visual-refresh) [class*=channelTextArea__]  [class*=button_]:hover{
+:where(.visual-refresh) [class*=channelTextArea__]  [class*=button_]:hover, :where(.visual-refresh) [class*=channelTextArea__] [class*=buttonContainer_]{
 --background-modifier-selected: transparent;
 }
 
