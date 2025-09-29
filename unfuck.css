@@ -1584,6 +1584,10 @@ border-top: 0;
   border-radius: 6px;
 }
 
+:where(.visual-refresh) [class*=channelTextArea__]  [class*=button_]:hover{
+--background-modifier-selected: transparent;
+}
+
 :where(.visual-refresh) [class*=channelTextArea__]:has([class*=replyBar__] , [class*=commandInfo__]) {
   border-top: 1px solid #2b2d31 !important;
 }
