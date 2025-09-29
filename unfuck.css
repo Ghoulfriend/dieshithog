@@ -450,9 +450,6 @@ scale: 105%;
 margin-left: 5px;
 }
 
-[class^=panels_] [class*=container__] [class*=avatarWrapper__]{
-}
-
 [class*=panels_] [class*=container__] [class*=container__]:has([class*=videoContainer__])
 {
   display: none;
@@ -1584,6 +1581,7 @@ border-top: 0;
 :where(.visual-refresh) [class*=channelTextArea__] {
   border-color: transparent !important;
   border: 1px solid transparent;
+  border-radius: 6px;
 }
 
 :where(.visual-refresh) [class*=channelTextArea__]:has([class*=replyBar__] , [class*=commandInfo__]) {
@@ -1879,9 +1877,11 @@ box-shadow: none;
 
 
 .visual-refresh [class*=form_]:has([class*=channelBottomBarArea_]) [class*=typing_]{
-  margin-top: 80px;
+  position: static;
+  margin-top: -21px;
+  margin-bottom: -3px;
   font-size: 14px !important;
-  height: 28px;
+  height: 24px;
   color: var(--text-default);
   left: 16px;
   padding-left: unset;
@@ -1889,9 +1889,13 @@ box-shadow: none;
   font-weight: 500;
 } 
 
+.inTextChannel_b88801 .text_b88801{
+  margin-left: 4px
+}
+
 [class*=cooldownText_]{
   font-size: 0px !important;
-  height: 28px;
+  height: 24px;
   color: var(--text-default);
   left: 16px;
   line-height: 24px;
