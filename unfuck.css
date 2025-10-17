@@ -1650,6 +1650,20 @@ content: 'Edit Note';
   width: 28px;
 }
 
+[aria-label="Direct Messages"] [href="/quest-home"] [class*=avatar_]
+{
+  margin-left: 2.5px;
+  margin-right: 5%;
+}
+
+[aria-label="Direct Messages"] [href="/quest-home"] [class*=avatar_] [class*=linkButtonIcon__]
+{
+  height: 28px;
+  width: 28px;
+}
+
+
+
 [aria-label="Direct Messages"] [href="/message-requests"] [class*=avatar_] [class*=linkButtonIcon__]
 {
   height: 28px;
