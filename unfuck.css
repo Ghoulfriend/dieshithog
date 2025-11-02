@@ -311,7 +311,7 @@ width: var(--chat-input-icon-size);
 height: var(--chat-input-icon-size)
 }
 
-[aria-label="Inbox"] svg
+[class*=trailing_] [aria-label="Inbox"]
 {
 width: var(--chat-input-icon-size);
 height: var(--chat-input-icon-size)
@@ -373,27 +373,27 @@ border-radius: 0px;
  box-shadow: 0 1px 5px 0px rgb(0, 0, 0, 0.4);
 }
 
-[class*=recentMentionsPopout__] [class*=header__]:not([class*=heading-xl\/semibold_])
+[class*=recentMentionsPopout__] [class*=header_]:not(h2)
 {
   background-color: #232428
 }
 
-[class*=recentMentionsPopout__] [class*=channelHeader__]
+[class*=recentMentionsPopout__] [class*=channelHeader_]
 {
   background-color: #2f3136;
 }
 
-[class*=recentMentionsPopout__] [class*=messageContainer__], [class*=recentMentionsPopout__] [class*=messages__] {
+[class*=recentMentionsPopout__] [class*=messageContainer_], [class*=recentMentionsPopout_] [class*=messages_] {
   background-color: #36393f;
 }
 
-[class*=recentMentionsPopout__] [class*=button__]
+[class*=recentMentionsPopout__] [class*=button_]
 {
   border-radius: 100% !important;
   background-color: #18191c !important;
 }
 
-[class*=recentMentionsPopout__] [class*=friendRequestsButton__]
+[class*=recentMentionsPopout__] [class*=friendRequestsButton_]
 {
 background-color: #18191c !important;
 }
@@ -432,6 +432,16 @@ border-radius: 4px;
 {
   border-color: transparent !important;
   border-radius: 4px;
+}
+
+[class*=privateChannels_] [class*=searchBar_] [class*=button__]
+{
+  background-color: var(--input-background);
+}
+
+[class*=privateChannels_] [class*=searchBar_]
+{
+box-shadow: 0px 1px 1px #202225;
 }
 
 
@@ -1029,33 +1039,42 @@ box-shadow: none;
    transform: scale(1.1) !important;
 }
 
-[aria-label="Pinned Messages"] [class*=header__]
+[aria-label="Pinned Messages"] [class*=header_]
 {
   --background-surface-high: #232428;
 }
 
-[aria-label="Pinned Messages"] [class*=messagesPopoutWrap__]
+[aria-label="Pinned Messages"] [class*=messagesPopoutWrap_]
 {
   background-color: #2f3136;
 }
 
-[aria-label="Pinned Messages"] [class*=messagesPopoutWrap__] [class*=text-lg\/semibold_]
+[aria-label="Pinned Messages"] [class*=messagesPopoutWrap_] [class*=text-lg\/semibold_]
 {
   color: var(--interactive-normal) !important;
 }
 
 
-[aria-label="Pinned Messages"] [class*=messageGroupWrapper__]{
+[aria-label="Pinned Messages"] [class*=messageGroupWrapper_]{
  /* box-shadow: 0px 0px 5px 1px #1f2023; */
  background-color: #36393f;
 }
 
-[class*=actionButtons__]:has([class*=jumpButton__]){
+[class*=actionButtons_]:has([class*=jumpButton_]){
   --background-surface-high: #232428;
   box-shadow: none !important;
 }
 
-[aria-label="Pinned Messages"] [class*=messagesPopoutWrap__]
+[class*=messageContainer__] [class*=jumpButton_]{
+  --background-surface-high: #232428;
+  box-shadow: none !important;
+}
+
+[class*=messageContainer__] [class*=jumpButton_]:hover{
+background-color: var(--background-surface-high);
+}
+
+[aria-label="Pinned Messages"] [class*=messagesPopoutWrap_]
 {
   box-shadow: 0 1px 5px 0px rgb(0, 0, 0, 0.4);
   --background-surface-high: #313338;
