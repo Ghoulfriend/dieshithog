@@ -439,6 +439,11 @@ border-radius: 4px;
   background-color: var(--input-background);
 }
 
+[class*=privateChannels_] [class*=searchBar_] [class*=secondary_]
+{
+  background-color: var(--input-background);
+}
+
 [class*=privateChannels_] [class*=searchBar_]
 {
 box-shadow: 0px 1px 1px #202225;
