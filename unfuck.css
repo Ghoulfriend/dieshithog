@@ -536,6 +536,11 @@ border:  1px solid var(--border-normal);
   color: var(--brand-200) !important;
 }
 
+.visual-refresh [class*=reaction__] [class*=reactionCount__]
+{
+  color: var(--text-subtle) !important
+}
+
 .visual-refresh [class*=reactionBtn__]:hover
 {
   background-color: var(--background-primary);
