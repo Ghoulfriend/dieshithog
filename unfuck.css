@@ -67,7 +67,7 @@
     }
 
     .selected_aa8da2 {
-        color: var(--text-secondary) !important;
+        color: var(--text-subtle) !important;
 
         &::after {
             display: none;
@@ -92,7 +92,7 @@
         }
 
         .top_aa8da2::before {
-            color: var(--text-secondary);
+            color: var(--text-subtle);
             border-bottom: none !important;
         }
 
@@ -167,12 +167,12 @@
 
     .top_aa8da2::before {
         content: "User Info";
-        color: var(--text-primary);
-        border-bottom: 2px solid var(--text-primary) !important;
+        color: var(--interactive-text-active);
+        border-bottom: 2px solid var(--interactive-text-active) !important;
         font-size: 14px;
         font-weight: 600;
         padding-bottom: 13px;
-        --tab-item-color: var(--text-primary);
+        --tab-item-color: var(--interactive-text-active);
         margin: 0px var(--space-xl) 0px 8px;
     }
 
@@ -182,7 +182,7 @@
     }
 
     .tabBarItem__37bfc:hover {
-        color: var(--text-primary) !important;
+        color: var(--text-subtle) !important;
         cursor: pointer;
 
         &::after {
@@ -293,9 +293,9 @@ background-color: unset;
 
 [aria-label="Inbox"]
 {
-  color: var(--icon-tertiary);
+  color: var(--icon-muted);
   position: fixed;
-  top: 44px;
+  top: 46px;
   right: 46px;
 }
 
@@ -1305,6 +1305,22 @@ border-radius: var(--radius-sm);
   border-radius: 3px !important;
   border-color: transparent !important;
   border: none;
+}
+
+[class*=searchBar_]:has([class*=DraftEditor])
+{
+    background-color: var(--input-background);
+
+}
+
+[class*=autocomplete__], [class*=autocomplete__] [class*=categoryHeader_]
+{
+  background-color: #2f3136;
+}
+
+[class*=autocomplete__]
+{
+  box-shadow: 0 12px 24px 0 hsl(none 0% 0%/0.24)
 }
 
 #vencordplugins-tab input , #pluginrepo-tab input, #vencordcloud-tab input
