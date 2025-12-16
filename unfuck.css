@@ -1351,6 +1351,13 @@ background-color: var(--input-background);
   font-weight: 500 !important;
 }
 
+[class*=public-DraftEditorPlaceholder-inner]:before
+{content: "Search";
+color: var(--input-placeholder-text-default);}
+
+[class*=public-DraftEditorPlaceholder-inner]
+{color: transparent !important;}
+
 [class*=contentRegion__] {
   --background-base-low: #313338;
 }
@@ -1367,6 +1374,7 @@ background-color: var(--input-background);
   --background-surface-higher: #111214;
   --background-surface-highest: #2b2d31;
   --text-link: #0baafc;
+  --input-placeholder-text-default: color-mix(in oklab,var(--neutral-36) 100%,var(--custom-theme-text-color,#000) var(--custom-theme-text-color-amount,0%));
   --background-secondary: #2b2d31;
   --background-secondary-alt: #2b2d31;
   --interactive-normal: #b5bac1;
