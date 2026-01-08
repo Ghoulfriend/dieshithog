@@ -295,13 +295,13 @@ background-color: unset;
 {
   color: var(--icon-muted);
   position: fixed;
-  top: 46px;
+  top: 44px;
   right: 46px;
 }
 
 .vc-toolbox-btn{
   position: fixed;
-  top: 39px;
+  top: 37px;
   right: 14px;
 }
 
@@ -344,9 +344,9 @@ height: var(--chat-input-icon-size)
   background: none;
 }
 
-.visual-refresh [class*=toolbar] [class*=search]
+.visual-refresh [class*=toolbar] ._496769951eb140fe-search
 {
- margin-right: 40px;
+ margin-right: 78px;
 }
 
 [class*=inviteToolbar]
@@ -373,7 +373,7 @@ border-radius: 0px;
  box-shadow: 0 1px 5px 0px rgb(0, 0, 0, 0.4);
 }
 
-[class*=recentMentionsPopout] [class*=header]:not(h2)
+[class*=recentMentionsPopout] [class*=header]:not(h2, h3, [id*=message-username])
 {
   background-color: #232428
 }
@@ -383,8 +383,8 @@ border-radius: 0px;
   background-color: #2f3136;
 }
 
-[class*=recentMentionsPopout] [class*=messageContainer], [class*=recentMentionsPopout] [class*=messages] {
-  background-color: #36393f;
+._957962c2bd49881b-messageContainer{
+  background-color: #36393f !important;
 }
 
 [class*=recentMentionsPopout] [class*=button]
@@ -533,6 +533,13 @@ border-radius: 4px;
 border:  1px solid var(--border-normal);
 }
 
+.visual-refresh [class*="reaction"]:not([class*=reactionMe], [class*=reactionCount]):hover[style]
+{
+  background: var(--background-mod-normal) !important;
+  opacity: 1 !important;
+  border-color: var(--border-faint) !important;
+}
+
 .visual-refresh [class*=reaction][class*=reactionMe]  [class*=reactionCount]{
   color: var(--brand-200) !important;
 }
@@ -544,7 +551,8 @@ border:  1px solid var(--border-normal);
 
 .visual-refresh [class*=reactionBtn]:hover
 {
-  background-color: var(--background-primary);
+  background-color: var(--background-mod-normal);
+  border-color: transparent
 }
 
 [class*=trait]:hover
@@ -696,10 +704,6 @@ border: 1px solid var(--user-profile-border)
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .02em;
-}
-
-.visual-refresh [class*=search] {
-  margin: 0 8px;
 }
 
 .visual-refresh [class*=search] [class*=searchBar]
@@ -1311,10 +1315,14 @@ border-radius: var(--radius-sm);
   background-color: #2f3136;
 }
 
-[class*=autocomplete]
+._13533e3c5791980f-autocompleteRowContent , ._13533e3c5791980f-autocompleteRowContentPrimary, ._13533e3c5791980f-autocompleteRowHeading, ._13533e3c5791980f-autocompleteRowContentSecondary, ._13533e3c5791980f-autocompleteRowSubheading, ._13533e3c5791980f-autocompleteRowIcon{
+  background-color: unset;
+}
+
+/*[class*=autocomplete]
 {
   box-shadow: 0 12px 24px 0 hsl(none 0% 0%/0.24)
-}
+}*/
 
 #vencordplugins-tab input , #pluginrepo-tab input, #vencordcloud-tab input
 {
@@ -1477,6 +1485,7 @@ background: var(--background-secondary);
 
 .visual-refresh [class*=sidebarList] {
   width: 264px !important;
+  border-top: none;
 }
 
 [class*=sidebarResizeHandle]
@@ -1508,20 +1517,19 @@ background: var(--background-secondary);
 
 [class*=hasBanner] [class*=header] {
   box-shadow: none !important; 
-  border-top: 1px solid #1e1f22;
-  height: calc(1px + var(--custom-channel-header-height))
+  border-top: none;
 }
 
 [class*=hasBanner] [class*=header]:hover {
   box-shadow: 0px 1px 1px #202225;
-  border-top: 1px solid #1e1f22
+  border-top: none;
 }
 
 
 
 [class*=hasBanner] [class*=animatedContainer]
 {
-  border-top: 1px solid #1e1f22
+  border-top: none;
 }
 
 [class*=bannerVisible] [class*=-headerGlass]
@@ -1587,7 +1595,7 @@ margin-top: -25px
 }
 
 [class*=popoutContainer][class*=popoutContent] [class*=guildSection] , [aria-label="Servers sidebar"]{
-  background-color: #202225;
+  background-color: #1e1f22;
 }
 
 
@@ -1628,6 +1636,7 @@ border-top: 0;
 
 :where(.visual-refresh) [class*=channelTextArea]  [class*=button]:hover, :where(.visual-refresh) [class*=channelTextArea] [class*=buttonContainer]{
 --background-modifier-selected: transparent;
+background-color:  transparent;
 }
 
 :where(.visual-refresh) [class*=channelTextArea]:has([class*=replyBar] , [class*=commandInfo]) {
