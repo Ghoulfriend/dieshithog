@@ -775,6 +775,10 @@ line-height: 20px;
 padding: 0 2px
 }
 
+.search__49676{
+  width: unset;
+}
+
 .visual-refresh [class*=search] [class*=DraftEditor-root]
 {
 height: inherit;
